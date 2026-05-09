@@ -10,7 +10,7 @@ import {
   Target, Rocket, ShieldCheck, FileText, Trash2, 
   User, Users2, Settings, Plus, LogOut, Menu, X, Search, Bell, PenTool, Mail,
   ChevronLeft, ChevronRight, Command, Zap, Search as SearchIcon, Filter, ArrowRightLeft, TrendingUp,
-  Briefcase, DollarSign, PieChart as PieChartIcon
+  Briefcase, DollarSign, PieChart as PieChartIcon, ExternalLink
 } from 'lucide-react';
 import { CRMProvider, useCRM, COUNTRIES, CURRENCIES } from './store';
 import { cn, formatCurrency } from './lib/utils';
@@ -495,7 +495,16 @@ const ClientsSection = () => {
                       {client.name[0]}
                     </div>
                     <div>
-                      <div className="font-black">{client.name}</div>
+                      <div className="flex items-center gap-2">
+                        <div className="font-black">{client.name}</div>
+                        <button 
+                          onClick={() => alert(`سيتم فتح بوابة العميل لـ ${client.name} قريباً...`)}
+                          className="text-text-tertiary hover:text-accent-purple transition-colors"
+                          title="رابط بوابة العميل"
+                        >
+                          <ExternalLink className="w-3.5 h-3.5" />
+                        </button>
+                      </div>
                       <div className="text-[10px] text-text-tertiary flex items-center gap-2">
                         <span className="flex items-center gap-1">📧 {client.email}</span>
                         {client.country && <span className="flex items-center gap-1">📍 {client.country} {client.region ? `- ${client.region}` : ''}</span>}
