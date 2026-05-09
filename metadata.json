@@ -1,0 +1,11 @@
+{
+  "name": "EasyGrow CRM",
+  "description": "نظام EasyGrow CRM الذكي: مركز قيادة متكامل لإدارة العملاء والفواتير والمهام، مع تحليل ذكي للأداء المالي، واجهة مستخدم متطورة تدعم الوضع الليلي، وتجربة شاملة متوافقة مع جميع الأجهزة.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "CRM",
+    "Invoicing",
+    "Project Management",
+    "Accounting"
+  ]
+}
